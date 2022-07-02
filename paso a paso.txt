@@ -1,0 +1,1 @@
+1) creamos un archivo index.js y dentro le requerimos o importamos el express
