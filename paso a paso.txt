@@ -1,1 +1,31 @@
-1) creamos un archivo index.js y dentro le requerimos o importamos el express
+1) crear proyecto ya deberiammos de saber como crearlo e instalar express y nodemon
+- creamos un archivo index.js y dentro le requerimos o importamos el express
+- ahora creo una aplicacion y para eso creo una variable llamada app y la inicializo con express()
+- despues con la varable app creamos el servidor con el metodo listen
+- dentro del metodo recibe el puerto y un collback el cual podemos mostrar mensaje de error o de conexion
+- despues escribir en consola nodemon index y listo se ejecuta el servidor
+- despues se escribe otro require que es un path
+- para tener el path de una carpeta publica, esto sirve para poder tener una pagina web ya sea informativa o muestra de error
+- ahoras despues de crear la carpeta public y el archivo index toca usar este archivo y para usarlo toca con el use y dentro le ponemos express.static debe quedar de la siguiente forma => app.use(express.static(publicPath))
+
+
+2) Se instala dotenv
+-se crea un archivo .env y dentro ponemos el puerto solamente y en el archivo principal el index ponemos lo siguiente => require('dotenv').config();
+- y cambio el puerto del index por el puerto por el puerto del asrchivo .env
+- despues en el archivo package.json escribimos
+- "start": "node index.js",
+- "start:dev": "nodemon index.js"
+
+3) instalar socket io => npm i socket.io
+- en el archivo index creamos un servidor para poder utilizar los sockets
+- lo que se hará de acá está todo en el archivo de instalación de los sockets => https://www.npmjs.com/package/socket.io
+- despues de configurar todo socket ahora emitiremos mensajes
+- haré una prueba en el html creare un emit en el script del html
+- y en el index crearé un cliente para escuchar el emit o el mensaje del html que tenga exactamente la misma llave del emit que en este caso sería "mensaje"
+- y en el mismo index creamos otro emit para enviarlo a los demas dispositivos conectados es el mismo emit creado en el html
+- y para que los dispositivos escuchen el cambio hay que poner a escuchar a esos dispositivos se escucha exactamente igual que en el index es muy muy muy parecido
+- por ultimo quiero separar la logica de mi midex sacando lo del socket y poniendolo en un archivo aparte
+
+
+OJITOOOOOOO
+para poder trabajar correctamente con los sockets hay que tener las versiones ultimas como en node y en flutter
